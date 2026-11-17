@@ -1,0 +1,61 @@
+{
+  "batch_id": "sample-delivery",
+  "tables": {
+    "products": [
+      {
+        "sku": "book",
+        "pack_size": "12",
+        "label": "文化绘本"
+      }
+    ],
+    "movements": [
+      {
+        "movement_id": "m1",
+        "warehouse": "A",
+        "sku": "book",
+        "occurred_at": "2026-11-09T08:00:00Z",
+        "quantity": "2",
+        "unit": "box",
+        "kind": "purchase"
+      },
+      {
+        "movement_id": "m2",
+        "warehouse": "A",
+        "sku": "book",
+        "occurred_at": "2026-11-09T09:00:00Z",
+        "quantity": "-3",
+        "unit": "piece",
+        "kind": "sale"
+      }
+    ],
+    "counts": [
+      {
+        "count_id": "c1",
+        "warehouse": "B",
+        "sku": "book",
+        "cutoff_at": "2026-11-09T10:00:00Z",
+        "quantity": "5"
+      }
+    ],
+    "transfers": [
+      {
+        "transfer_id": "t1",
+        "source": "A",
+        "destination": "B",
+        "sku": "book",
+        "dispatched_at": "2026-11-09T09:30:00Z",
+        "quantity": "12",
+        "status": "dispatched"
+      }
+    ],
+    "arrivals": [
+      {
+        "arrival_id": "a1",
+        "transfer_id": "t1",
+        "received_at": "2026-11-09T11:00:00Z",
+        "quantity": "7",
+        "disposition": "accepted"
+      }
+    ]
+  }
+}
